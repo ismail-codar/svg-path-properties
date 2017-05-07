@@ -498,6 +498,11 @@ var pathProperties = function(svgString) {
     return length;
   };
 
+  svgProperties.getFunctionAtLength = function(fractionLength){
+    var fractionPart = getPartAtLength(fractionLength);
+    return functions[fractionPart.i];
+  };
+
   svgProperties.getPointAtLength = function(fractionLength){
     var fractionPart = getPartAtLength(fractionLength);
     return functions[fractionPart.i].getPointAtLength(fractionPart.fraction);
